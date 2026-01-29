@@ -1,0 +1,29 @@
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 16px 24px;
+
+    &__inner {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+}
+
+.footer-menu {
+    @include list-reset;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 40px;
+
+    a {
+        color: var(--text_white);
+        text-decoration: none;
+        @include hover {
+            color: var(--accent);
+        }
+    }
+}

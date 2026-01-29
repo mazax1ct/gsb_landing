@@ -1,0 +1,127 @@
+.section-1 {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    height: 100dvh;
+    justify-content: space-between;
+    max-height: 800px;
+    overflow: hidden;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 0;
+    @media(min-width: $md) {
+        min-height: 650px;
+        max-height: 900px;
+    }
+
+    &::after {
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(19, 19, 20, 0) 0%, #131314 100%);
+        content: '';
+        height: 420px;
+        left: 0;
+        position: absolute;
+        top: auto;
+        width: 100%;
+        z-index: 0;
+    }
+
+    &__top {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__logo {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+        @media(max-width: $md - 0.02px) {
+            width: 100px;
+        }
+
+        span {
+            color: #fff;
+            display: block;
+            font-family: var(--secondary_font);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.2;
+            text-transform: uppercase;
+            @media(max-width: $md - 0.02px) {
+                display: none;
+            }
+        }
+    }
+
+    &__contacts {
+        align-items: flex-end;
+        background: rgba(19, 19, 20, 0.2);
+        border-radius: 0 0 24px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        line-height: 1.15;
+        padding: 12px 20px 20px;
+        text-align: right;
+        @media(min-width: $md) {
+            font-size: 20px;
+            padding-top: 64px;
+        }
+
+        a {
+            color: var(--white);
+            text-decoration: none;
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+
+        .button {
+            @media(max-width: $sm - 0.02px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__bird,
+    &__blot {
+        max-width: initial;
+        position: absolute;
+        pointer-events: none;
+        touch-action: none;
+        user-select: none;
+        z-index: 0;
+    }
+
+    &__blot {
+        left: -120px;
+        top: 0;
+        transform: translateY(-50%);
+        width: 1400px;
+        @media(min-width: $md) {
+            left: 50%;
+            transform: translate(-60%,-46%);
+        }
+    }
+
+    &__bird {
+        left: 50%;
+        top: -100px;
+        transform: translateX(-50%);
+        width: 850px;
+        @media(min-width: $md) {
+            top: -370px;
+            transform: translateX(-48%);
+            width: 1490px;
+        }
+    }
+}

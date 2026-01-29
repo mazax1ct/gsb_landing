@@ -1,0 +1,20 @@
+$xs: 480px;
+$sm: 768px;
+$md: 1024px;
+$hd: 1220px;
+$lg: 1400px;
+$fhd: 1900px;
+
+:root {
+    --black: #131314;
+    --white: #F8FAFB;
+    --accent: #FE731E;
+    --button_hover: #CC441A;
+    --grey: #262629;
+    --grey_dark: #434352;
+    --warning: #FF5338;
+    --container_padding: 24px;
+    --container_max_width: 1328px;
+    --primary_font: 'Tilda Sans', Arial, sans-serif;
+    --secondary_font: '2MASS J1808', Arial, sans-serif;
+}

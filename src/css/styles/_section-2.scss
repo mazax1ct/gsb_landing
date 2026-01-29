@@ -1,0 +1,8 @@
+.section-2 {
+    background-color: var(--black);
+    border-radius: 0 0 24px 24px;
+    color: var(--white);
+    @media(max-width: $sm - 0.02px) {
+        padding-bottom: 32px;
+    }
+}

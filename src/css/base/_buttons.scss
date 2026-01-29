@@ -1,0 +1,124 @@
+.button {
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--secondary_font);
+    font-size: 16px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1.22;
+    min-height: 48px;
+    padding: 8px 30px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s;
+    @media(min-width: $sm) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    &.disabled,
+    &:disabled,
+    &[data-disabled] {
+        cursor: default;
+        pointer-events: none;
+    }
+
+    &--primary {
+        background-color: var(--accent);
+        color: #fff;
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                background-color: var(--button_hover);
+                color: #fff;
+            }
+        }
+
+        &.disabled,
+        &:disabled,
+        &[data-disabled] {
+            background-color: var(--secondary_2);
+            border-color: var(--secondary_2);
+            color: #fff;
+        }
+    }
+
+    &--secondary {
+        background-color: var(--white);
+        border-color: var(--accent);
+        color: var(--accent);
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                border-color: var(--button_hover);
+                color: var(--button_hover);
+            }
+        }
+
+        &.disabled,
+        &:disabled,
+        &[data-disabled] {
+            background-color: #fff;
+            border-color: var(--secondary_2);
+            color: var(--secondary_2);
+        }
+    }
+
+    &--gradient {
+        background: linear-gradient(270deg, #FE731E 0%, #CC441A 100%);
+        border: none;
+        color: var(--white);
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            background: linear-gradient(270deg, #CC441A 0%, #FE731E 100%);
+            content: '';
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            transition: opacity 0.3s;
+            width: 100%;
+            z-index: 0;
+        }
+
+        & > span {
+            position: relative;
+            z-index: 1;
+        }
+
+        &:not(.disabled),
+        &:not(:disabled),
+        &:not([data-disabled]) {
+            @include hover {
+                color: var(--white);
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.disabled,
+        &:disabled,
+        &[data-disabled] {
+            background-color: #fff;
+            //border-color: var(--secondary_2);
+            color: var(--secondary_2);
+        }
+    }
+
+    &--h_60 {
+        min-height: 60px;
+    }
+}

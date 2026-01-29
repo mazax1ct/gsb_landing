@@ -1,0 +1,139 @@
+.section-5 {
+    overflow: hidden;
+    padding-top: 40px;
+    position: relative;
+    z-index: 1;
+    @media(min-width: $sm) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    &__inner {
+        @media(min-width: $sm) {
+            align-items: center;
+            display: flex;
+            gap: 100px;
+        }
+    }
+
+    &__text {
+        max-width: 688px;
+        position: relative;
+        z-index: 1;
+        @media(min-width: $sm) {
+            min-width: 688px;
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    &__image {
+        max-width: 714px;
+        pointer-events: none;
+        position: relative;
+        touch-action: none;
+        user-select: none;
+        z-index: 0;
+        @media(min-width: $sm) {
+            min-width: 714px;
+        }
+        @media(max-width: $sm - 0.02px) {
+            margin-top: -24px;
+            max-width: 327px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &::before {
+            background-color: #CC441A;
+            border-radius: 50%;
+            content: '';
+            filter: blur(150px);
+            height: 288px;
+            left: calc(50% - 288px/2);
+            position: absolute;
+            top: -50%;
+            width: 288px;
+            z-index: 0;
+            @media(min-width: $sm) {
+                width: 727px;
+                height: 727px;
+                top: 50%;
+                left: 0;
+                opacity: 0.5;
+                transform: translateY(-50%);
+            }
+        }
+
+        img {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+.reviews-list {
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.review {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    @media(min-width: $md) {
+        padding-bottom: 40px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    &__top {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        margin-bottom: 8px;
+        @media(min-width: $md) {
+            flex-direction: row;
+        }
+    }
+
+    &__image {
+        border-radius: 50%;
+        height: 64px;
+        min-width: 64px;
+        object-fit: cover;
+        object-position: center;
+        width: 64px;
+    }
+
+    &__author-name {
+        font-family: var(--secondary_font);
+        font-weight: 400;
+        margin-bottom: 4px;
+        @media(min-width: $md) {
+            font-size: 20px;
+        }
+    }
+
+    &__rating-date {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__rating {
+        display: flex;
+    }
+
+    &__date {
+        color: var(--grey_dark);
+    }
+
+    &__text {
+        font-size: 20px;
+    }
+}
