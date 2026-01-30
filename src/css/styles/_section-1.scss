@@ -7,7 +7,6 @@
     height: 100dvh;
     justify-content: space-between;
     max-height: 800px;
-    overflow: hidden;
     padding-bottom: 80px;
     position: relative;
     z-index: 0;
@@ -35,6 +34,9 @@
         position: relative;
         width: 100%;
         z-index: 1;
+        @media(min-width: $md) {
+            align-items: flex-end;
+        }
     }
 
     &__logo {

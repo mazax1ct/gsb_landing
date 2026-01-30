@@ -20,7 +20,6 @@ window.onload = () => {
             elem.width = '100%';
             elem.height = '500px';
             elem.setAttribute('frameborder', '0');
-
             if (document.querySelector('body').offsetWidth < 768) {
               let url = new URL('https://yandex.ru/map-widget/v1/?um=constructor%3Ade80474c9df453bd90d141a23c23a976e1e8359c348c30f4430e5898b05ebc2d');
               url.searchParams.set('theme', 'dark');

@@ -5,18 +5,22 @@
     cursor: pointer;
     display: inline-flex;
     font-family: var(--secondary_font);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     justify-content: center;
     line-height: 1.22;
-    min-height: 48px;
+    min-height: 44px;
     padding: 8px 30px;
     text-decoration: none;
     text-align: center;
     transition: all 0.3s;
     @media(min-width: $sm) {
+        font-size: 16px;
         padding-left: 40px;
         padding-right: 40px;
+    }
+    @media(min-width: $md) {
+        font-size: 18px;
     }
 
     &.disabled,

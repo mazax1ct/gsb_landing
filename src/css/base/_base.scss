@@ -42,6 +42,7 @@ html {
 
     &__content {
         flex: 1 0 auto;
+        overflow: hidden;
     }
 }
 
@@ -69,48 +70,36 @@ h3 {
 
 .h1,
 h1 {
-    font-size: 32px;
+    font-size: clamp(32px, 4.5vw, 64px);
     margin-bottom: 32px;
     @media(min-width: $md) {
-        font-size: 64px;
         margin-bottom: 40px;
     }
 }
 
 .h2,
 h2 {
-    font-size: 20px;
+    font-size: clamp(20px, 3.1vw, 44px);
     margin-bottom: 12px;
     @media(min-width: $md) {
-        font-size: 44px;
         margin-bottom: 40px;
     }
 }
 
 .h3,
 h3 {
-    font-size: 20px;
+    font-size: clamp(20px, 3.1vw, 32px);
     line-height: 1.2;
     margin-bottom: 12px;
-    @media(min-width: $md) {
-        font-size: 32px;
-    }
-
-    &.big {
-        font-size: 20px;
-        @media(min-width: $md) {
-            font-size: 24px;
-        }
-    }
 }
 
 .h4,
 h4 {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.3;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.32;
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
 }
 
 a {
@@ -158,7 +147,7 @@ ul {
 
     &:not([class]) {
         margin-top: 0;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
 
         &:last-child {
             margin-bottom: 0;
@@ -166,32 +155,7 @@ ul {
 
         li {
             &:not(:last-child) {
-                margin-bottom: 12px;
-                @media(min-width: $md) {
-                    margin-bottom: 16px;
-                }
-            }
-        }
-    }
-
-    &.columned_2 {
-        @media(min-width: $sm) {
-            columns: 2;
-            column-gap: 30px;
-        }
-
-        li {
-            overflow: hidden;
-            -webkit-column-break-inside: avoid;
-            page-break-inside: avoid;
-            break-inside: avoid;
-            break-inside: avoid-column;
-
-            &:not(:last-child) {
-                margin-bottom: 10px;
-                @media(min-width: $md) {
-                    margin-bottom: 10px;
-                }
+                margin-bottom: 4px;
             }
         }
     }
@@ -202,31 +166,29 @@ ol {
 
     li {
         &::marker {
-            color: var(--accent);
-            font-weight: 700;
+            color: inherit;
         }
     }
 }
 
 ul {
-    &.columned_2,
     &:not([class]) {
         list-style: none;
 
         li {
-            padding-left: 12px;
+            padding-left: 24px;
             position: relative;
             z-index: 1;
 
             &::before {
-                background-color: var(--accent);
+                background-color: var(--white);
                 border-radius: 50%;
                 content: '';
-                height: 6px;
-                left: 0;
+                height: 3px;
+                left: 10px;
                 position: absolute;
-                top: 0.56em;
-                width: 6px;
+                top: 0.68em;
+                width: 3px;
                 z-index: 1;
             }
         }

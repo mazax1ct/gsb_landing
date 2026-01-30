@@ -1,13 +1,8 @@
 .section-3 {
-    overflow: hidden;
-    padding-top: 40px;
-    padding-bottom: 100px;
+    padding-top: clamp(40px, 7vw, 100px);
+    padding-bottom: clamp(100px, 11vw, 155px);
     position: relative;
     z-index: 0;
-    @media(min-width: $sm) {
-        padding-top: 100px;
-        padding-bottom: 155px;
-    }
 
     &::after {
         background-color: #FE731E;
@@ -101,13 +96,7 @@
     }
 
     &__text {
-        font-family: var(--secondary_font);
-        font-weight: 900;
-        line-height: 1.2;
-        text-transform: uppercase;
-        @media(min-width: $md) {
-            font-size: 32px;
-        }
+        font-size: clamp(16px, 3.1vw, 32px);
 
         &:not(:last-child) {
             margin-bottom: 20px;
